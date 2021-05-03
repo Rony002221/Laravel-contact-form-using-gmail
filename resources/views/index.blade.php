@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Contact V1</title>
+	<title>MHR Contact Page</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -29,7 +29,8 @@
 				<img src="images/img-01.png" alt="IMG">
 			</div>
 
-			<form class="contact1-form validate-form">
+			<form class="contact1-form validate-form" action="{{route('contact_us')}}" method="POST">
+				@csrf
 				<span class="contact1-form-title">
 					Get in touch
 				</span>
@@ -55,7 +56,7 @@
 				</div>
 
 				<div class="container-contact1-form-btn">
-					<button class="contact1-form-btn">
+					<button class="contact1-form-btn" type="submit">
 						<span>
 							Send Email
 							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
